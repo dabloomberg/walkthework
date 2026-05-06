@@ -406,9 +406,9 @@ export default function WalkTheWork() {
       {/* ── Hero image band ── */}
       <div className="w-full h-64 md:h-80 overflow-hidden bg-stone-200 relative">
         <img
-          src={`${import.meta.env.BASE_URL}hero-walk-photo.jpg`}
-          alt="Two people walking along a wooded path"
-          className="w-full h-full object-cover object-[center_58%]"
+          src={`${import.meta.env.BASE_URL}hero-hampstead-city.jpg`}
+          alt="London skyline seen across the Heath"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-stone-900/10" />
         <div className="absolute inset-x-0 bottom-0 h-1.5 bg-lime-400/70" />
