@@ -244,6 +244,8 @@ function InquiryForm() {
 // ─── Main Page ───────────────────────────────────────────────────────────────
 
 export default function WalkTheWork() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#fafaf9', color: '#1c1917' }}>
 
@@ -262,7 +264,66 @@ export default function WalkTheWork() {
           >
             Book a Walk
           </a>
+          <button
+            type="button"
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen(open => !open)}
+            className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-stone-200 bg-white text-stone-900"
+          >
+            <span className="relative w-5 h-4">
+              <span
+                className={`absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition-transform duration-200 ${
+                  mobileMenuOpen ? 'translate-y-[7px] rotate-45' : ''
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-[7px] h-0.5 w-5 rounded-full bg-current transition-opacity duration-200 ${
+                  mobileMenuOpen ? 'opacity-0' : 'opacity-100'
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-[14px] h-0.5 w-5 rounded-full bg-current transition-transform duration-200 ${
+                  mobileMenuOpen ? '-translate-y-[7px] -rotate-45' : ''
+                }`}
+              />
+            </span>
+          </button>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-stone-200 bg-stone-50/98 backdrop-blur-sm">
+            <div className="max-w-5xl mx-auto px-6 py-5 flex flex-col gap-3 text-sm font-semibold uppercase tracking-wider text-stone-600">
+              <a
+                href="#what-it-is"
+                onClick={() => setMobileMenuOpen(false)}
+                className="rounded-xl px-4 py-3 hover:bg-stone-100 hover:text-stone-900 transition-colors"
+              >
+                What it is
+              </a>
+              <a
+                href="#how-it-works"
+                onClick={() => setMobileMenuOpen(false)}
+                className="rounded-xl px-4 py-3 hover:bg-stone-100 hover:text-stone-900 transition-colors"
+              >
+                How it works
+              </a>
+              <a
+                href="#about"
+                onClick={() => setMobileMenuOpen(false)}
+                className="rounded-xl px-4 py-3 hover:bg-stone-100 hover:text-stone-900 transition-colors"
+              >
+                About Daniel
+              </a>
+              <a
+                href="#book"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mt-2 inline-flex items-center justify-center bg-stone-900 text-stone-50 px-5 py-3 rounded-xl text-xs tracking-wide hover:bg-stone-800 transition-colors"
+              >
+                Book a Walk
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* ── Hero ── */}
