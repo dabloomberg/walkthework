@@ -243,8 +243,6 @@ function InquiryForm() {
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
 
-const CALENDLY_URL = 'https://calendly.com/danielbloomberg/walk-the-work'
-
 export default function WalkTheWork() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#fafaf9', color: '#1c1917' }}>
@@ -259,7 +257,7 @@ export default function WalkTheWork() {
             <a href="#about" className="hover:text-stone-900 transition-colors">About Daniel</a>
           </div>
           <a
-            href="#inquiry"
+            href="#book"
             className="hidden md:inline-flex items-center bg-stone-900 text-stone-50 px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wide hover:bg-stone-800 transition-colors"
           >
             Book a Walk
@@ -315,15 +313,13 @@ export default function WalkTheWork() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#book"
                 className="inline-flex items-center bg-stone-900 text-stone-50 px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:bg-stone-800 active:bg-stone-950 transition-colors"
               >
                 Book a Walk
               </a>
               <a
-                href="#inquiry"
+                href="#book"
                 className="inline-flex items-center text-stone-700 border border-stone-300 px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:border-stone-500 hover:text-stone-900 transition-colors"
               >
                 Make an Enquiry
@@ -577,69 +573,34 @@ export default function WalkTheWork() {
 
       {/* ── Booking ── */}
       <section id="book" className="py-24 px-6" style={{ background: '#1c1917' }}>
-        <div className="max-w-5xl mx-auto text-center">
-          <h2
-            className="text-4xl md:text-5xl mb-6 text-stone-50 leading-tight"
-            style={{ fontFamily: 'DM Serif Display, serif' }}
-          >
-            Book a Walk
-          </h2>
-          <p className="text-stone-400 text-lg mb-4 max-w-xl mx-auto">
-            Introductory first session: £150 for a 90-minute walking session on Hampstead Heath.
-          </p>
-
-          {/* booking details */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm text-stone-500">
-            <span>📍 Hampstead Heath</span>
-            <span>⏱ 90 minutes</span>
-            <span>🌦 All-weather</span>
-            <span>💳 Payment via Stripe</span>
-          </div>
-
-          <div className="mb-5">
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-stone-900 px-10 py-5 rounded-lg font-semibold text-sm tracking-wide hover:opacity-90 transition-opacity"
-              style={{ background: '#a3e635' }}
-            >
-              Book a Walk
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
-          </div>
-
-          <p className="text-xs text-stone-600 max-w-sm mx-auto mb-6">
-            Scheduling via Calendly → Stripe payment → confirmed booking. Your session is confirmed only after payment is completed.
-          </p>
-
-          <a
-            href="#inquiry"
-            className="text-sm text-stone-500 hover:text-stone-300 underline underline-offset-4 transition-colors"
-          >
-            Not ready to book? Make an enquiry instead.
-          </a>
-        </div>
-      </section>
-
-      {/* ── Inquiry ── */}
-      <section id="inquiry" className="py-24 px-6 bg-stone-50">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+            <div className="lg:pt-4">
               <h2
-                className="text-4xl md:text-5xl mb-6 leading-tight"
+                className="text-4xl md:text-5xl mb-6 text-stone-50 leading-tight"
                 style={{ fontFamily: 'DM Serif Display, serif' }}
               >
-                Not sure yet?
+                Book a Walk
               </h2>
-              <p className="text-stone-600 text-lg leading-relaxed">
-                Use this short form if you want to ask a question before booking, or if you are unsure whether Walk the Work is the right fit.
+              <p className="text-stone-400 text-lg mb-4 max-w-xl">
+                Introductory first session: £150 for a 90-minute walking session on Hampstead Heath.
+              </p>
+
+              <div className="flex flex-wrap gap-6 mb-8 text-sm text-stone-500">
+                <span>📍 Hampstead Heath</span>
+                <span>⏱ 90 minutes</span>
+                <span>🌦 All-weather</span>
+              </div>
+
+              <p className="text-stone-300 leading-relaxed max-w-xl mb-4">
+                Use the form to send Daniel the decision you are carrying and any practical context that will help.
+              </p>
+              <p className="text-stone-400 leading-relaxed max-w-xl">
+                After you submit it, Daniel will reply with scheduling options and payment details if Walk the Work seems like a useful fit.
               </p>
             </div>
-            <div>
+
+            <div className="bg-stone-50 rounded-3xl p-8 md:p-10">
               <InquiryForm />
             </div>
           </div>
@@ -707,15 +668,13 @@ export default function WalkTheWork() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book"
               className="inline-flex items-center justify-center bg-stone-900 text-stone-50 px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:bg-stone-800 transition-colors"
             >
               Book a Walk — £150
             </a>
             <a
-              href="#inquiry"
+              href="#book"
               className="inline-flex items-center justify-center text-stone-700 border border-stone-300 px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:border-stone-500 transition-colors"
             >
               Make an Enquiry
@@ -741,7 +700,6 @@ export default function WalkTheWork() {
                 <li><a href="#how-it-works" className="hover:text-stone-300 transition-colors">How it works</a></li>
                 <li><a href="#about" className="hover:text-stone-300 transition-colors">About Daniel</a></li>
                 <li><a href="#book" className="hover:text-stone-300 transition-colors">Book a Walk</a></li>
-                <li><a href="#inquiry" className="hover:text-stone-300 transition-colors">Enquiry</a></li>
               </ul>
             </div>
             <div>
