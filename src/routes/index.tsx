@@ -405,72 +405,13 @@ export default function WalkTheWork() {
 
       {/* ── Hero image band ── */}
       <div className="w-full h-64 md:h-80 overflow-hidden bg-stone-200 relative">
-        {/* SVG landscape illustration — Hampstead Heath path */}
-        <svg
-          viewBox="0 0 1200 320"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <defs>
-            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#e7e5e4" />
-              <stop offset="100%" stopColor="#d6d3d1" />
-            </linearGradient>
-            <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#a8a29e" />
-              <stop offset="100%" stopColor="#78716c" />
-            </linearGradient>
-          </defs>
-          {/* sky */}
-          <rect width="1200" height="320" fill="url(#skyGrad)" />
-          {/* distant hills */}
-          <path d="M0 200 Q150 140 300 180 Q450 220 600 160 Q750 100 900 180 Q1050 240 1200 190 L1200 320 L0 320Z" fill="#c7c3c0" />
-          {/* mid hills */}
-          <path d="M0 230 Q200 190 400 220 Q600 250 800 210 Q1000 170 1200 230 L1200 320 L0 320Z" fill="#b5b0ab" />
-          {/* ground */}
-          <path d="M0 260 Q300 240 600 265 Q900 285 1200 255 L1200 320 L0 320Z" fill="url(#groundGrad)" />
-          {/* path — clearly defined dirt track */}
-          <path
-            d="M480 320 Q500 270 530 240 Q560 210 580 190 Q600 170 620 145"
-            stroke="#e7e5e4"
-            strokeWidth="14"
-            fill="none"
-            strokeLinecap="round"
-            opacity="0.9"
-          />
-          <path
-            d="M480 320 Q500 270 530 240 Q560 210 580 190 Q600 170 620 145"
-            stroke="#d6d3d1"
-            strokeWidth="8"
-            fill="none"
-            strokeLinecap="round"
-            opacity="0.6"
-          />
-          {/* two walking figures */}
-          {/* figure 1 */}
-          <circle cx="546" cy="218" r="5" fill="#44403c" />
-          <line x1="546" y1="223" x2="546" y2="238" stroke="#44403c" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="546" y1="227" x2="540" y2="234" stroke="#44403c" strokeWidth="2" strokeLinecap="round" />
-          <line x1="546" y1="227" x2="552" y2="234" stroke="#44403c" strokeWidth="2" strokeLinecap="round" />
-          <line x1="546" y1="238" x2="542" y2="247" stroke="#44403c" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="546" y1="238" x2="550" y2="247" stroke="#44403c" strokeWidth="2.5" strokeLinecap="round" />
-          {/* figure 2 */}
-          <circle cx="558" cy="224" r="5" fill="#57534e" />
-          <line x1="558" y1="229" x2="558" y2="244" stroke="#57534e" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="558" y1="233" x2="552" y2="240" stroke="#57534e" strokeWidth="2" strokeLinecap="round" />
-          <line x1="558" y1="233" x2="564" y2="240" stroke="#57534e" strokeWidth="2" strokeLinecap="round" />
-          <line x1="558" y1="244" x2="554" y2="253" stroke="#57534e" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="558" y1="244" x2="562" y2="253" stroke="#57534e" strokeWidth="2.5" strokeLinecap="round" />
-          {/* trees left */}
-          <ellipse cx="150" cy="195" rx="50" ry="40" fill="#a8a29e" opacity="0.6" />
-          <ellipse cx="200" cy="210" rx="35" ry="30" fill="#92918d" opacity="0.5" />
-          {/* trees right */}
-          <ellipse cx="1050" cy="190" rx="60" ry="45" fill="#a8a29e" opacity="0.6" />
-          <ellipse cx="1000" cy="205" rx="40" ry="35" fill="#92918d" opacity="0.5" />
-          {/* accent stripe at bottom */}
-          <rect x="0" y="314" width="1200" height="6" fill="#a3e635" opacity="0.7" />
-        </svg>
+        <img
+          src={`${import.meta.env.BASE_URL}hero-walk-photo.jpg`}
+          alt="Two people walking along a wooded path"
+          className="w-full h-full object-cover object-[center_58%]"
+        />
+        <div className="absolute inset-0 bg-stone-900/10" />
+        <div className="absolute inset-x-0 bottom-0 h-1.5 bg-lime-400/70" />
       </div>
 
       {/* ── Problem section ── */}
