@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // ─── Logo / Wordmark ────────────────────────────────────────────────────────
 
@@ -63,6 +63,20 @@ function InquiryForm() {
   const [interests, setInterests] = useState<string[]>([])
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    if (!submitted) {
+      return
+    }
+
+    const bookingSection = document.getElementById('book')
+    if (!bookingSection) {
+      return
+    }
+
+    window.history.replaceState(null, '', '#book')
+    bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [submitted])
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
