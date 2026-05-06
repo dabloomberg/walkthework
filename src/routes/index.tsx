@@ -249,7 +249,7 @@ function InquiryForm() {
         type="submit"
         className="w-full sm:w-auto bg-stone-900 text-stone-50 px-8 py-4 rounded-lg text-sm font-semibold tracking-wide hover:bg-stone-800 active:bg-stone-950 transition-colors cursor-pointer"
       >
-        Send Enquiry
+        Book a Walk
       </button>
     </form>
   )
@@ -392,12 +392,6 @@ export default function WalkTheWork() {
                 className="inline-flex items-center bg-stone-900 text-stone-50 px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:bg-stone-800 active:bg-stone-950 transition-colors"
               >
                 Book a Walk
-              </a>
-              <a
-                href="#book"
-                className="inline-flex items-center text-stone-700 border border-stone-300 px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:border-stone-500 hover:text-stone-900 transition-colors"
-              >
-                Make an Enquiry
               </a>
             </div>
 
@@ -748,12 +742,6 @@ export default function WalkTheWork() {
             >
               Book a Walk — £150
             </a>
-            <a
-              href="#book"
-              className="inline-flex items-center justify-center text-stone-700 border border-stone-300 px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:border-stone-500 transition-colors"
-            >
-              Make an Enquiry
-            </a>
           </div>
         </div>
       </section>
@@ -761,7 +749,7 @@ export default function WalkTheWork() {
       {/* ── Footer ── */}
       <footer className="py-12 px-6 bg-stone-900 text-stone-500 border-t border-stone-800">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <div>
               <Logo inverted />
               <p className="text-sm mt-4 text-stone-500 leading-relaxed max-w-xs">
@@ -776,17 +764,6 @@ export default function WalkTheWork() {
                 <li><a href="#about" className="hover:text-stone-300 transition-colors">About Daniel</a></li>
                 <li><a href="#book" className="hover:text-stone-300 transition-colors">Book a Walk</a></li>
               </ul>
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-stone-600 mb-4">Contact</p>
-              <p className="text-sm text-stone-400">Daniel Bloomberg</p>
-              <p className="text-sm text-stone-500">London</p>
-              <a
-                href="mailto:daniel@danielbloomberg.com"
-                className="text-sm text-stone-400 hover:text-stone-200 transition-colors"
-              >
-                daniel@danielbloomberg.com
-              </a>
             </div>
           </div>
           <div className="border-t border-stone-800 pt-6 flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
