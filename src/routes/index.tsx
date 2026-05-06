@@ -257,12 +257,9 @@ export default function WalkTheWork() {
             <a href="#what-it-is" className="hover:text-stone-900 transition-colors">What it is</a>
             <a href="#how-it-works" className="hover:text-stone-900 transition-colors">How it works</a>
             <a href="#about" className="hover:text-stone-900 transition-colors">About Daniel</a>
-            <a href="#inquiry" className="hover:text-stone-900 transition-colors">Enquiry</a>
           </div>
           <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#inquiry"
             className="hidden md:inline-flex items-center bg-stone-900 text-stone-50 px-5 py-2.5 rounded-lg text-xs font-semibold tracking-wide hover:bg-stone-800 transition-colors"
           >
             Book a Walk
