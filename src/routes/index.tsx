@@ -39,7 +39,7 @@ function encode(data: Record<string, string>) {
     .join('&')
 }
 
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/daniel@danielbloomberg.com'
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/9a62d193a15e6671be6e1267c02d0565'
 
 // ─── Inquiry Form ───────────────────────────────────────────────────────────
 
