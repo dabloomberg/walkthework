@@ -411,7 +411,6 @@ export default function WalkTheWork() {
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-stone-900/10" />
-        <div className="absolute inset-x-0 bottom-0 h-1.5 bg-lime-400/70" />
       </div>
 
       {/* ── Problem section ── */}
